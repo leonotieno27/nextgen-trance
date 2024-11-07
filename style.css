@@ -1,0 +1,117 @@
+/* Body Background for Main Screen */
+body {
+    text-align: center;
+    background-color: #1c3a3e; /* Dark green background for the whole page */
+    color: #e5e3dc; /* Muted cream for general text */
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Menu Icon */
+.menu {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    cursor: pointer;
+    color: #e5e3dc; /* Muted cream for visibility */
+    fill: #e5e3dc; /* For SVG icon color */
+}
+
+/* Heading */
+.heading {
+    padding-left: 1em;
+    color:  #e5e3dc; /* Muted cream for a vintage touch */
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Main Menu Styling */
+.main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1c3a3e; /* Matches body background */
+    width: 12em;
+    height: 100vh; /* Full height for consistent overlay */
+    z-index: 1000;
+    padding-top: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Adds depth */
+}
+
+/* List and Link Styles */
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-menu ul li {
+    padding: 1em 0;
+}
+
+#main-menu ul li a {
+    color: #e5e3dc; /* Muted cream for readability */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', serif;
+}
+
+#main-menu ul li a:hover {
+    color: #d4af37; /* Antique gold on hover for contrast */
+    cursor: pointer;
+}
+
+.img-template {
+    width: 18em;
+    height: 10em;
+}
+
+/* Card Container */
+.card {
+    background-color: #ffffff; /* White background for the card */
+    color: #1c3a3e; /* Dark green text for contrast */
+    padding-right: 1.5em;
+    width: 17em;
+    border: 1px solid #d4af37; /* Antique gold border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 8px;
+    font-family: Georgia, serif;
+    margin: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates clickability */
+    overflow: hidden; /* Ensures image or text doesn’t overflow */
+}
+
+/* Image inside Card */
+.img-template {
+    width: 100%;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+/* Title inside Card */
+figcaption h2 {
+    font-size: 1.2em;
+    color: #1c3a3e; /* Dark green for the title */
+    margin-top: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Optional: Adding a subtle transition to image on hover */
+.card:hover .img-template {
+    opacity: 0.9; /* Slight fade effect for image on hover */
+}
