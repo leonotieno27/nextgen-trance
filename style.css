@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+
 /* Body Background for Main Screen */
 body {
     text-align: center;
@@ -28,8 +31,12 @@ body {
 .heading {
     padding-left: 1em;
     color:  #1c3a3e; /* Muted cream for a vintage touch */
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
     font-weight: bold;
-    font-style: italic;
+    font-style: normal;
+    font-variation-settings:
+      "ROND" 0;
 }
 
 /* Main Menu Styling */
@@ -72,6 +79,9 @@ body {
     width: 18em;
     height: 10em;
 }
+.numbered{
+    text-align: left;
+}
 
 /* Card Container */
 .card {
@@ -92,6 +102,7 @@ body {
 /* Image inside Card */
 .img-template {
     width: 100%;
+    height: auto;
     border-radius: 8px 8px 0 0; /* Rounded top corners */
 }
 
@@ -120,4 +131,65 @@ figcaption h2 {
     font-family: Georgia, serif;
     cursor: pointer; /* Indicates clickability */
     overflow: hidden; /* Ensures image or text doesn’t overflow */
+}
+/* Larger screens */
+@media only screen and (min-width: 48em) {
+    /* Increase image size */
+    .img-template {
+        width: 80%; /* Increase image width on larger screens */
+        max-width: 600px; /* Limit max width */
+        margin: 0 auto; /* Center image */
+    }
+
+    /* Adjust font sizes for better readability */
+    h1.heading {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+
+    h2, h3, h4 {
+        font-size: 1.3em;
+        text-align: center;
+
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.6; /* Improve readability */
+    }
+
+    /* Add padding for better spacing on desktop */
+    .content-container {
+        padding: 0 2em;
+    }
+    .numbered{
+        text-align: left;
+    }
+}
+
+/* Extra large screens */
+@media only screen and (min-width: 64em) {
+    /* Further increase the image size */
+    .img-template {
+        width: 70%;
+        max-width: 800px;
+    }
+
+    /* Adjust heading sizes */
+    h1.heading {
+        font-size: 3em;
+    }
+
+    h2, h3, h4 {
+        font-size: 1.5em;
+    }
+
+    /* Limit content width */
+    .content-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .numbered{
+        text-align: left;
+    }
 }
