@@ -165,6 +165,9 @@ figcaption h2 {
     .numbered{
         text-align: left;
     }
+    .content-body {
+        display: flex;
+    }
 }
 
 /* Extra large screens */
@@ -191,5 +194,8 @@ figcaption h2 {
     }
     .numbered{
         text-align: left;
+    }
+    .content-body {
+        display: flex;
     }
 }
